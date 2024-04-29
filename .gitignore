@@ -1,5 +1,8 @@
 node_modules
-
+.DS_Store
 /.cache
 /build
 .env
+hi@chance.dev-token.json
+template/package-lock.json
+template/burgers.json
