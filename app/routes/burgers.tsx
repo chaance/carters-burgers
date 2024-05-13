@@ -27,6 +27,7 @@ export default function Burgers() {
 						type="text"
 						name="burger"
 						placeholder="Describe your burger..."
+						autoComplete="off"
 						required
 					/>
 				</label>
