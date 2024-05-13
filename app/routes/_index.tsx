@@ -1,4 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
+import { redirect, type MetaFunction } from "@remix-run/node";
+
+export function loader() {
+	return redirect("/burgers");
+}
 
 export const meta: MetaFunction = () => {
 	return [
