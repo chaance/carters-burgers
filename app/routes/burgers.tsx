@@ -14,7 +14,6 @@ export function meta() {
 
 export default function Burgers() {
 	const fetcher = useFetcher<typeof getBurgerLoader>();
-
 	const html = React.useMemo(() => formatHtml(fetcher.data), [fetcher.data]);
 
 	return (

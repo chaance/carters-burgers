@@ -18,9 +18,7 @@ export async function loader(args: LoaderFunctionArgs) {
 	return json(embeddings, {
 		headers: {
 			// cache for 1 day
-			// "Cache-Control": "public, max-age=86400",
-			// bust cache
-			"Cache-Control": "public, max-age=0",
+			"Cache-Control": "public, max-age=86400",
 		},
 	});
 }

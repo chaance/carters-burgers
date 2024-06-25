@@ -3,7 +3,6 @@ import {
 	json,
 	useActionData,
 	useFetcher,
-	useNavigate,
 	useNavigation,
 } from "@remix-run/react";
 import * as React from "react";
@@ -11,9 +10,9 @@ import type { loader as getVectorsLoader } from "./get-vectors";
 import { INGREDIENTS } from "../lib/ingredients";
 import type { Ingredient } from "../lib/db.server";
 import { generateIngredientEmbedding } from "../lib/utils.server";
-import { db, CollectionAlreadyExistsError } from "../lib/db.server";
+import { db } from "../lib/db.server";
 import type { ActionFunctionArgs } from "@remix-run/node";
-import { UUID, ObjectId } from "@datastax/astra-db-ts";
+import { UUID } from "@datastax/astra-db-ts";
 
 export async function action(args: ActionFunctionArgs) {
 	const collection = db.collection<Ingredient>("ingredients");
