@@ -1,34 +1,19 @@
-# Welcome to Remix + Vite!
+# Carter's Burgers
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+Some fun with Astra DB, OpenAPI and Remix. And burgers!
 
-## Development
+To run this you will need an Astra DB account and a database. You can get a free
+tier account at
+[https://astra.datastax.com/register](https://astra.datastax.com/register).
 
-Run the Express server with Vite dev middleware:
+You will also need to set some environment variables. Clone the `.env.example`
+file to `.env` and fill in the values from your Astra DB account.
 
-```shellscript
-npm run dev
-```
+You will also need to create a database collection and populated it.
 
-## Deployment
+- You can create a collection in the DB by visiting the `/create-collection` route and completing the form.
+- You can populate the collection by visiting the `/vectors` route. Click `Load
+vectors` to generate some vector data based on a list of burger ingredients,
+  then click `Insert vectors` to insert the data into the collection.
 
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Express applications you should be right at home. Just make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+Your app should be ready to run! Enjoy the burgers 🍔
